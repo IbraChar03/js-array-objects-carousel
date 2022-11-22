@@ -103,6 +103,7 @@ let next = document.createElement("div");
  next.classList.add("fa-angle-down");
  thumbnails.append(next);
 
+const time=setInterval(autoplay, 3000);
 
 next.addEventListener("click",
  function(){
@@ -195,6 +196,16 @@ prev.addEventListener("click",
  }
  
  );
+
+ function autoplay(){
+  if (i === arrayimg.length) {
+    i = 0;
+  }
+  document.querySelector(".img-size").src = arrayimg[i].image;
+  document.querySelector(".title").innerHTML = arrayimg[i].title;
+  document.querySelector(".desc").innerHTML = arrayimg[i].desc;
+    i++;
+}
 
 
 
