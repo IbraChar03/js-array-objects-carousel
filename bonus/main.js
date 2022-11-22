@@ -1,53 +1,108 @@
-let main=document.querySelector("main");
+let arrayimg=[
+
+  {
+    "image" : "img/01.webp",
+    "title" : "Marvel's Spiderman Miles Morale",
+    "desc" : "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man."
+  },
+
+  {
+     "image" : "img/02.webp",
+     "title" : "Ratchet & Clank: Rift Apart",
+     "desc" : "Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality."
+   },
+
+   {
+     "image" : "img/03.webp",
+     "title" : "Fortnite",
+     "desc" : "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos."
+   },
+
+   {
+     "image" : "img/04.webp",
+     "title" : "Stray",
+     "desc" : "Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city"
+   },
+
+   {
+     "image" : "img/05.webp",
+     "title" : "Marvel's Avengers",
+     "desc" : "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay."
+   }
+]
+let i=0;
+
+let main = document.querySelector("main");
 let container=document.createElement("div");
 container.classList.add("container");
 main.append(container)
-let slider=document.createElement("div");
+
+let slider = document.createElement("div");
 slider.classList.add("slider");
 container.append(slider);
-let item=document.createElement("div");
+
+let item = document.createElement("div");
 item.classList.add("item");
 slider.append(item);
-let img=document.createElement("img");
+
+let img = document.createElement("img");
 img.classList.add("img-size");
+img.src = arrayimg[i].image;
 item.append(img);
- let thumbnails=document.createElement("div");
+
+let title = document.createElement("div");
+ title.classList.add("title");
+ title.innerHTML = arrayimg[i].title;
+ item.append(title);
+
+ let desc = document.createElement("div");
+ desc.classList.add("desc");
+ desc.innerHTML = arrayimg[i].desc;
+ item.append(desc);
+
+ let thumbnails = document.createElement("div");
  thumbnails.classList.add("thumb");
  item.append(thumbnails);
-let img1=document.createElement("img");
+
+let img1 = document.createElement("img");
  img1.classList.add("img2");
  img1.style.opacity="0.5";
  thumbnails.append(img1);
-  img1.src="img/01.webp";
-  let img2=document.createElement("img");
+  img1.src=arrayimg[0].image;
+
+  let img2 = document.createElement("img");
  img2.classList.add("img2");
  thumbnails.append(img2);
-  img2.src="img/02.webp";
- let img3=document.createElement("img");
+ img2.src=arrayimg[1].image;
+
+ let img3 = document.createElement("img");
  img3.classList.add("img2");
  thumbnails.append(img3);
- img3.src="img/03.webp";
- let img4=document.createElement("img");
+ img3.src=arrayimg[2].image;
+
+ let img4 = document.createElement("img");
  img4.classList.add("img2");
  thumbnails.append(img4);
- img4.src="img/04.webp";
- let img5=document.createElement("img");
+ img4.src=arrayimg[3].image;
+
+ let img5 = document.createElement("img");
  img5.classList.add("img2");
  thumbnails.append(img5);
- img5.src="img/05.webp";
-let next=document.createElement("div");
+ img5.src=arrayimg[4].image;
+
+let next = document.createElement("div");
  next.classList.add("next");
  next.classList.add("fa-solid");
  next.classList.add("fa-angle-down");
  thumbnails.append(next);
- let prev=document.createElement("div");
+
+ let prev = document.createElement("div");
  prev.classList.add("prev");
  prev.classList.add("fa-solid");
  prev.classList.add("fa-angle-up");
  thumbnails.append(prev);
- let arrayimg=["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img/05.webp"]
- i=0;
- img.src=arrayimg[i];
+
+
  next.addEventListener("click",
  function(){
   i++;
@@ -79,7 +134,10 @@ let next=document.createElement("div");
     img1.style.opacity="1";
     img2.style.opacity="1";
   }
-  img.src=arrayimg[i];
+
+  img.src = arrayimg[i].image;
+  title.innerHTML = arrayimg[i].title;
+  desc.innerHTML = arrayimg[i].desc;
  }
  
  );
@@ -129,7 +187,10 @@ let next=document.createElement("div");
     img1.style.opacity="0.5";
     img2.style.opacity="1";
   }
-  img.src=arrayimg[i];
+
+  img.src = arrayimg[i].image;
+  title.innerHTML = arrayimg[i].title;
+  desc.innerHTML = arrayimg[i].desc;
  }
  
  );
