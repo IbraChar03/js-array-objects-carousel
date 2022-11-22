@@ -1,5 +1,4 @@
-// let arrayimg=["img/01.webp", "img/02.webp","img/03.webp","img/04.webp","img/05.webp"]
- let arrayimg=[
+let arrayimg = [
 
     {
       "image" : "img/01.webp",
@@ -32,37 +31,41 @@
      }
  ]
  let i = 0;
-let main=document.querySelector("main");
-let container=document.createElement("div");
+let main = document.querySelector("main");
+let container = document.createElement("div");
 container.classList.add("container");
 main.append(container);
-let slider=document.createElement("div");
+
+let slider = document.createElement("div");
 slider.classList.add("slider");
 container.append(slider);
-let item=document.createElement("div");
+
+let item = document.createElement("div");
 item.classList.add("item");
 slider.append(item);
- let img=document.createElement("img");
+
+ let img = document.createElement("img");
  img.classList.add("img-size");
  item.append(img)
  img.src = arrayimg[i].image;
 
- let title=document.createElement("div");
+ let title = document.createElement("div");
  title.classList.add("title");
- title.innerHTML=arrayimg[i].title;
+ title.innerHTML = arrayimg[i].title;
  item.append(title);
 
- let desc=document.createElement("div");
+ let desc = document.createElement("div");
  desc.classList.add("desc");
- desc.innerHTML=arrayimg[i].desc;
+ desc.innerHTML = arrayimg[i].desc;
  item.append(desc);
 
- let next=document.createElement("div");
+ let next = document.createElement("div");
  next.classList.add("next");
  next.classList.add("fa-solid");
  next.classList.add("fa-angle-up");
  slider.append(next);
- let prev=document.createElement("div");
+ 
+ let prev = document.createElement("div");
  prev.classList.add("prev");
  prev.classList.add("fa-solid");
  prev.classList.add("fa-angle-down");
@@ -76,7 +79,7 @@ slider.append(item);
     }
     img.src = arrayimg[i].image;
     title.innerHTML = arrayimg[i].title;
-    desc.innerHTML=arrayimg[i].desc;
+    desc.innerHTML = arrayimg[i].desc;
    
 
    }
@@ -91,7 +94,7 @@ slider.append(item);
    }
    img.src = arrayimg[i].image;
    title.innerHTML = arrayimg[i].title;
-   desc.innerHTML=arrayimg[i].desc;
+   desc.innerHTML = arrayimg[i].desc;
    }
 
 );
