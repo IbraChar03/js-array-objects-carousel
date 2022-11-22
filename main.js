@@ -30,13 +30,13 @@ let arrayimg = [
        "desc" : "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay."
      }
  ]
- 
+
 let i = 0;
 
 let main = document.querySelector("main");
 let container = document.createElement("div");
-container.classList.add("container");
-main.append(container);
+ container.classList.add("container");
+ main.append(container);
 
 let slider = document.createElement("div");
 slider.classList.add("slider");
@@ -46,35 +46,35 @@ let item = document.createElement("div");
 item.classList.add("item");
 slider.append(item);
 
- let img = document.createElement("img");
+let img = document.createElement("img");
  img.classList.add("img-size");
  item.append(img)
  img.src = arrayimg[i].image;
 
- let title = document.createElement("div");
+let title = document.createElement("div");
  title.classList.add("title");
  title.innerHTML = arrayimg[i].title;
  item.append(title);
 
- let desc = document.createElement("div");
+let desc = document.createElement("div");
  desc.classList.add("desc");
  desc.innerHTML = arrayimg[i].desc;
  item.append(desc);
 
- let next = document.createElement("div");
+let next = document.createElement("div");
  next.classList.add("next");
  next.classList.add("fa-solid");
  next.classList.add("fa-angle-up");
  slider.append(next);
  
- let prev = document.createElement("div");
+let prev = document.createElement("div");
  prev.classList.add("prev");
  prev.classList.add("fa-solid");
  prev.classList.add("fa-angle-down");
  slider.append(prev);
 
- next.addEventListener("click",
-   function(){
+next.addEventListener("click",
+  function(){
      i++;
    if (i > arrayimg.length - 1) {
     i = 0;
@@ -88,7 +88,7 @@ slider.append(item);
  );
 
 
- prev.addEventListener("click",
+prev.addEventListener("click",
  function(){
    i--;
     if (i < 0) {
