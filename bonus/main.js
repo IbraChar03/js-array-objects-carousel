@@ -115,6 +115,7 @@ function(){
 let button2=document.getElementById("btn2")
 button2.addEventListener("click",
 function(){
+  i=0;
    clearInterval(click);
    time=setInterval(autoplay2, 3000);
 }
@@ -123,6 +124,7 @@ function(){
 let button3=document.getElementById("btn3")
 button3.addEventListener("click",
 function(){
+ 
   clearInterval(click);
   clearInterval(time);
 }
@@ -233,14 +235,14 @@ prev.addEventListener("click",
 
 function autoplay2(){
   clearInterval(click);
-  
-   if (i === arrayimg.length) {
-     i = 0;
-   }
+ 
    document.querySelector(".img-size").src = arrayimg[i].image;
    document.querySelector(".title").innerHTML = arrayimg[i].title;
    document.querySelector(".desc").innerHTML = arrayimg[i].desc;
     i++;
+    if (i === arrayimg.length) {
+      i = 0;
+   }
 }
 
 
