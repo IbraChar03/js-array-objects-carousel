@@ -103,14 +103,11 @@ let next = document.createElement("div");
  next.classList.add("fa-angle-down");
  thumbnails.append(next);
 let button=document.getElementById("btn")
-let click=null;
+let click;
+let time;
 button.addEventListener("click",
 function(){
-  
-    const click=setInterval(autoplay, 3000);
-  
-  
-   
+     click=setInterval(autoplay, 3000);
   
 }
 );
@@ -118,8 +115,16 @@ function(){
 let button2=document.getElementById("btn2")
 button2.addEventListener("click",
 function(){
+   clearInterval(click);
+   time=setInterval(autoplay2, 3000);
+}
+);
+
+let button3=document.getElementById("btn3")
+button3.addEventListener("click",
+function(){
   clearInterval(click);
-  const time=setInterval(autoplay2, 3000);
+  clearInterval(time);
 }
 );
 

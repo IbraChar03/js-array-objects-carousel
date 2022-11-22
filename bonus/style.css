@@ -111,9 +111,25 @@ main{
     padding: 10px;
     margin-right: 10px;
     font-size: 15px;
+    border-radius: 5px;
+    background-color: darkorange;
+    border-color: darkorange;
+    color: white;
 }
 #btn2{
     padding: 10px;
-   
+    margin-right: 10px;
     font-size: 15px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: white;
+    border-color: aqua;
+}
+#btn3{
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: chartreuse;
+    border-color: chartreuse;
+    color: white;
 }
