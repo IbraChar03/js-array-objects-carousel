@@ -102,8 +102,27 @@ let next = document.createElement("div");
  next.classList.add("fa-solid");
  next.classList.add("fa-angle-down");
  thumbnails.append(next);
+let button=document.getElementById("btn")
+let click=null;
+button.addEventListener("click",
+function(){
+  
+    const click=setInterval(autoplay, 3000);
+  
+  
+   
+  
+}
+);
 
-const time=setInterval(autoplay, 3000);
+let button2=document.getElementById("btn2")
+button2.addEventListener("click",
+function(){
+  clearInterval(click);
+  const time=setInterval(autoplay2, 3000);
+}
+);
+
 
 next.addEventListener("click",
  function(){
@@ -204,6 +223,18 @@ prev.addEventListener("click",
   document.querySelector(".img-size").src = arrayimg[i].image;
   document.querySelector(".title").innerHTML = arrayimg[i].title;
   document.querySelector(".desc").innerHTML = arrayimg[i].desc;
+    i++;
+}
+
+function autoplay2(){
+  clearInterval(click);
+  
+   if (i === arrayimg.length) {
+     i = 0;
+   }
+   document.querySelector(".img-size").src = arrayimg[i].image;
+   document.querySelector(".title").innerHTML = arrayimg[i].title;
+   document.querySelector(".desc").innerHTML = arrayimg[i].desc;
     i++;
 }
 
