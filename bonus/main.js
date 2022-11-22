@@ -1,4 +1,4 @@
-let arrayimg=[
+let arrayimg = [
 
   {
     "image" : "img/01.webp",
@@ -30,6 +30,7 @@ let arrayimg=[
      "desc" : "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay."
    }
 ]
+
 let i=0;
 
 let main = document.querySelector("main");
@@ -90,17 +91,17 @@ let img1 = document.createElement("img");
  thumbnails.append(img5);
  img5.src=arrayimg[4].image;
 
-let next = document.createElement("div");
- next.classList.add("next");
- next.classList.add("fa-solid");
- next.classList.add("fa-angle-down");
- thumbnails.append(next);
-
- let prev = document.createElement("div");
- prev.classList.add("prev");
+let prev = document.createElement("div");
+ prev.classList.add("next");
  prev.classList.add("fa-solid");
  prev.classList.add("fa-angle-up");
  thumbnails.append(prev);
+
+ let next = document.createElement("div");
+ next.classList.add("prev");
+ next.classList.add("fa-solid");
+ next.classList.add("fa-angle-down");
+ thumbnails.append(next);
 
 
  next.addEventListener("click",

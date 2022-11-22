@@ -30,7 +30,9 @@ let arrayimg = [
        "desc" : "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay."
      }
  ]
- let i = 0;
+ 
+let i = 0;
+
 let main = document.querySelector("main");
 let container = document.createElement("div");
 container.classList.add("container");
